@@ -1,4 +1,7 @@
+package ServerSideChallenge1;
 
+
+import ServerSideChallenge1.MainServlet1;
 import java.util.*;
 
 public class DataProcessor {
@@ -9,7 +12,7 @@ public class DataProcessor {
     }
 
     public double calculateCircleArea(String radius) {
-        double area2 = MainServlet.PI * Double.parseDouble(radius) * Double.parseDouble(radius);
+        double area2 = MainServlet1.PI * Double.parseDouble(radius) * Double.parseDouble(radius);
         return area2;
     }
 

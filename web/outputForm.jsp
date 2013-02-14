@@ -17,24 +17,24 @@
     </head>
     <body>
         <%
-            if (request.getAttribute("area1") != null) {
+            if (request.getAttribute("answerRect") != null) {
                 out.println("<h1><center>Area of that Rectangle</center></h1>");
-                Object output = request.getAttribute("area1");
+                Object output = request.getAttribute("answerRect");
                 out.println("AREA OF THAT RECTANGLE: " + output);
-            } else if (request.getAttribute("area2") != null) {
+            } else if (request.getAttribute("answerCirc") != null) {
                 out.println("<h1><center>Area of that Circle</center></h1>");
-                Object output = request.getAttribute("area2");
+                Object output = request.getAttribute("answerCirc");
                 out.println("AREA OF THAT CIRCLE: " + output);
-            } else if (request.getAttribute("c") != null) {
+            } else if (request.getAttribute("answerTri1") != null) {
                 out.println("<h1><center>Hypotenuse</center></h1>");
-                Object output = request.getAttribute("c");
+                Object output = request.getAttribute("answerTri1");
                 out.println("HYPOTENUSE: " + output);
-            } else if (request.getAttribute("b") != null) {
+            } else if (request.getAttribute("answerTri2") != null) {
                 out.println("<h1><center>Other Leg</center></h1>");
-                Object output = request.getAttribute("b");
+                Object output = request.getAttribute("answerTri2");
                 out.println("OTHER LEG: " + output);
             }
         %>
-            <h3><a href="inputForm.jsp">Go back</a></h3>
+            <h3><a href="inputForm1.jsp">Go back</a></h3>
     </body>
 </html>

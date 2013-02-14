@@ -1,3 +1,5 @@
+package ServerSideChallenge1;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -16,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author sennis
  */
-@WebServlet(name = "mainServlet", urlPatterns = {"/mainServlet"})
-public class MainServlet extends HttpServlet {
+@WebServlet(name = "mainServlet1", urlPatterns = {"/mainServlet1"})
+public class MainServlet1 extends HttpServlet {
 
     private static final String OUTPUT_PAGE = "outputForm.jsp";
     public static final double PI = 3.14159265359;
@@ -38,14 +40,13 @@ public class MainServlet extends HttpServlet {
 
         DataProcessor dp = new DataProcessor();
         double area1;
-
         if (request.getParameter("rectangleSubmit") != null) {
 
             String w = request.getParameter("width1");
             String l = request.getParameter("length1");
 
             area1 = dp.calculateRectangleArea(l, w);
-            request.setAttribute("area1", area1);
+            request.setAttribute("answerRect", area1);
 //            double area1;
 //
 //            area1 = Double.parseDouble(w) * Double.parseDouble(l);
@@ -62,7 +63,7 @@ public class MainServlet extends HttpServlet {
 
             area2 = PI * (Double.parseDouble(r) * Double.parseDouble(r));
 
-            request.setAttribute("area2", area2);
+            request.setAttribute("answerCirc", area2);
 
         }
 
@@ -77,7 +78,7 @@ public class MainServlet extends HttpServlet {
                     + (Double.parseDouble(leg2) * Double.parseDouble(leg2));
             c = Math.sqrt(c);
 
-            request.setAttribute("c", c);
+            request.setAttribute("answerTri1", c);
 
         }
 
@@ -92,7 +93,7 @@ public class MainServlet extends HttpServlet {
                     - (Double.parseDouble(leg2) * Double.parseDouble(leg2));
             b = Math.sqrt(b);
 
-            request.setAttribute("b", b);
+            request.setAttribute("answerTri2", b);
 
         }
 

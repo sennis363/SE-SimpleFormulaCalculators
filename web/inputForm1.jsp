@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Simple Formula Calculators</title>
+        <title>Simple Formula Calculators, Challenge 1</title>
         <script type="text/javascript">
             function validateForm1()
             {
@@ -63,6 +63,7 @@
                     return false;
                 } else if (x > y) {
                     alert("Hypotenuse can't be a lower value than a leg.")
+                    return false;
                 } else if (x == 0 || y == 0) {
                     alert("Any side of a triangle can't be 0");
                     return false;
@@ -72,30 +73,26 @@
         </script>
     </head>
     <body>
-    <center><h1>Simple Formula Calculators</h1></center>
+    <center><h1>Simple Formula Calculators, Challenge 1</h1></center>
     <p>Area of a Rectangle</p>
-    <form id="form1" name="form1" method="POST" action="mainServlet.do">
+    <form id="form1" name="form1" method="POST" action="mainServlet1">
         Length: <input type="text" name="length1" id="length1"><br/>
         Width: <input type="text" name="width1" id="width1">
         <input id="rectangleSubmit" name="rectangleSubmit" type="submit" value="Calculate" onclick="return validateForm1()" />
-        <%
-        if (1 == 1) {
-            //enter request logic here
-        }
-        %>
     </form>
     <br/>
     <p>Area of a Circle</p>
-    <form id="form2" name="form2" method="POST" action="mainServlet.do">
+    <form id="form2" name="form2" method="POST" action="mainServlet1">
         Radius: <input type="text" name="radius" id="radius">
         <input id="circleSubmit" name="circleSubmit" type="submit" value="Calculate" onclick="return validateForm2()" />
     </form>
     <br/>
     <p>Sides of a Right Triangle</p>
-    <form id="form3" name="form3" method="POST" action="mainServlet.do">
+    <form id="form3" name="form3" method="POST" action="mainServlet1">
         Leg 1: <input type="text" name="leg1" id="leg1">
         Leg 2: <input type="text" name="leg2" id="leg2">
         Hypotenuse: <input type="text" name="hypotenuse" id="hypotenuse">
+        <br/>
         <input id="triangleSubmit1" name="triangleSubmit1" type="submit" value="Solve for Hypotenuse" onclick="return validateForm3LegLeg()">
         <input id="triangleSubmit2" name="triangleSubmit2" type="submit" value="Solve for a Leg" onclick="return validateForm3LegHypo()">
     </form>
